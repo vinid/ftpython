@@ -3,19 +3,12 @@ from ftplib import FTP
 
 DATASIZE = 8192
 
-def helplo():
-    print "\n******************************************************"
-    print "\nThis is a simple script that loads a file to an FTP server."
-    print "first parameter is the host (ex = ftp.something.com)"
-    print "second parameter is your username"
-    print "third parameter is the file you want to upload"
-    print "\n******************************************************"
 toret = "-help"
 if(sys.argv[1] == toret):
     helplo()
 
 if(len(sys.argv) != 5):
-    print 'usage: %s <host> <username> <directory> <file>' % (sys.argv[0])
+    print 'general usage: %s <host> <username> <directory> <file>' % (sys.argv[0])
     print '%s -help for help\n' % (sys.argv[0])
     exit(1)
 
@@ -55,3 +48,10 @@ ftp.quit()
 #Function
 
 
+def helplo():
+    print "\n******************************************************"
+    print "\nThis is a simple script that loads a file to an FTP server."
+    print "first parameter is the host (ex = ftp.something.com)"
+    print "second parameter is your username"
+    print "third parameter is the file you want to upload"
+    print "\n******************************************************"
